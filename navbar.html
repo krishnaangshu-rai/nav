@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <nav class="bg-red-500 p-2 flex justify-between items-center relative">
+      <div class="logo pl-8">
+        <img
+          src="/images/logo.png"
+          width="50"
+          height="50"
+          class="rounded-xl"
+          alt=""
+        />
+      </div>
+
+      <!-- yo chai mobile ma show huncha 2ota line -->
+      <div class="lines" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links flex items-center gap-8">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      /*first ma query garera nikalne*/
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        const translate = document.querySelector(".lines");
+        /* yo chai active huda toggle gardine*/
+        navLinks.classList.toggle("active");
+        translate.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
