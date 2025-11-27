@@ -19,6 +19,7 @@ body {
   color: #4caf50;
 }
 
+/* esley chai desktop mode ma lukaucha line lai */
 .lines {
   display: none;
   flex-direction: column;
@@ -33,11 +34,14 @@ body {
   transition: all 0.3s;
 }
 
+/* esle garda style chai screen size heri matra apply huncha */
+/* .line le chai display flex garera lines dekhaucha */
 @media (max-width: 768px) {
   .lines {
     display: flex;
   }
 
+  /* nav ko links haru dropdown ma dekhaucha */
   .nav-links {
     position: absolute;
     top: 100%;
@@ -51,15 +55,18 @@ body {
     transition: max-height 0.3s ease-in-out;
   }
 
+  /* links thiche ki dropdown aucha */
   .nav-links.active {
     max-height: 300px;
   }
 
+  /* individual lists ko style */
   .nav-links li {
     padding: 1rem 2rem;
     border-top: 1px solid #444;
   }
 
+  /* main animation nthchild1 first line rotate clockwise positive cha, translate le (x,y) x-hor y-ver ani +is down - is up */
   .lines.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
   }
