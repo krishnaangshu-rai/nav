@@ -8,32 +8,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <nav class="bg-red-500 p-2 flex justify-between items-center relative">
-      <div class="logo pl-8">
-        <img
-          src="/images/logo.png"
-          width="50"
-          height="50"
-          class="rounded-xl"
-          alt=""
-        />
-      </div>
+    <div class="main relative">
+      <nav
+        class="bg-red-500 p-2 fixed top-0 bottom-0 left-0 flex flex-col justify-between"
+      >
+        <div class="logo pl-0">
+          <img
+            src="/images/logo.png"
+            width="50"
+            height="50"
+            class="rounded-xl"
+            alt=""
+          />
+        </div>
 
-      <!-- yo chai mobile ma show huncha 2ota line -->
-      <div class="lines" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <!-- yo chai mobile ma show huncha 2ota line -->
+        <div class="lines pl-2 pb-4" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <ul class="nav-links flex items-center gap-8">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
+        <ul class="nav-links flex flex-col gap-8">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="body w-full h-[3000px]"></div>
     <script>
       /*first ma query garera nikalne*/
       function toggleMenu() {

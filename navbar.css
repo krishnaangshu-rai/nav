@@ -41,7 +41,7 @@ body {
     display: flex;
   }
 
-  /* nav ko links haru dropdown ma dekhaucha */
+  /* nav ko links haru dropdown ma dekhaucha 
   .nav-links {
     position: absolute;
     top: 100%;
@@ -55,9 +55,27 @@ body {
     transition: max-height 0.3s ease-in-out;
   }
 
-  /* links thiche ki dropdown aucha */
+  links thiche ki dropdown aucha 
   .nav-links.active {
     max-height: 300px;
+  }
+  */
+
+  .nav-links {
+    position: absolute;
+    top: 50%; /* Aligns with the top of the nav area */
+    left: 100%; /* Places the menu to the right side of the navbar container */
+    width: 0; /* Start invisible horizontally */
+    background-color: #ff6666;
+    height: 100vh; /* Full screen height (optional) */
+    overflow: hidden; /* Hide content when width is 0 */
+    transition: width 0.3s ease-in-out; /* Smooth horizontal slide */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    width: 250px; /* Slide open to the right */
   }
 
   /* individual lists ko style */
